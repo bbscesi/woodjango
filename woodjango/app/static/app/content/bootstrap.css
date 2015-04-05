@@ -2049,8 +2049,9 @@ fieldset[disabled] .btn {
 }
 
 .btn-default {
-  color: #333333;
-  background-color: #ffffff;
+  transition:all ease-in-out 0.5s 0.0s;
+  color: #ffffff;
+  background-color: #008800;
   border-color: #cccccc;
 }
 
@@ -4501,12 +4502,13 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse {
-  background-color: #222222;
+  background-color: #008800;
   border-color: #080808;
 }
 
 .navbar-inverse .navbar-brand {
-  color: #999999;
+  transition:all ease-in-out 0.5s 0.0s;
+  color: #000000;
 }
 
 .navbar-inverse .navbar-brand:hover,
@@ -4520,7 +4522,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
 }
 
 .navbar-inverse .navbar-nav > li > a {
-  color: #999999;
+  transition:all ease-in-out 0.5s 0.0s;
+  color: #000000;
 }
 
 .navbar-inverse .navbar-nav > li > a:hover,
