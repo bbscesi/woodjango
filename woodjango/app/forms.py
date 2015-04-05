@@ -22,11 +22,11 @@ class BootstrapAuthenticationForm(AuthenticationForm):
     
 
 class RegistrationForm(forms.Form):
-    username = forms.CharField(label='Username', max_length=30)
+    username = forms.CharField(label='Votre nom', max_length=30)
     email = forms.EmailField(label='Email')
-    password1 = forms.CharField(label='Password',
+    password1 = forms.CharField(label='Mdp',
                           widget=forms.PasswordInput())
-    password2 = forms.CharField(label='Password (Again)',
+    password2 = forms.CharField(label='Confirmer Mdp',
                         widget=forms.PasswordInput())
 
     def clean_password2(self):
