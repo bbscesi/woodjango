@@ -14,7 +14,7 @@ class BootstrapAuthenticationForm(AuthenticationForm):
     username = forms.CharField(max_length=254,
                                widget=forms.TextInput({
                                    'class': 'form-control',
-                                   'placeholder': 'User name'}))
+                                   'placeholder': 'Login'}))
     password = forms.CharField(label=_("Password"),
                                widget=forms.PasswordInput({
                                    'class': 'form-control',
@@ -22,12 +22,22 @@ class BootstrapAuthenticationForm(AuthenticationForm):
     
 
 class RegistrationForm(forms.Form):
-    username = forms.CharField(label='Votre nom', max_length=30)
-    email = forms.EmailField(label='Email')
-    password1 = forms.CharField(label='Mdp',
-                          widget=forms.PasswordInput())
-    password2 = forms.CharField(label='Confirmer Mdp',
-                        widget=forms.PasswordInput())
+    username = forms.CharField(max_length=254,
+                               widget=forms.TextInput({
+                                   'class': 'form-control',
+                                   'placeholder': 'Login'}))
+    email = forms.CharField(max_length=254,
+                               widget=forms.TextInput({
+                                   'class': 'form-control',
+                                   'placeholder': 'EMail'}))
+    password1 = forms.CharField(label='Mot de passe',
+                          widget=forms.PasswordInput({
+                                   'class': 'form-control',
+                                   'placeholder':'Password'}))
+    password2 = forms.CharField(label='Confirmer',
+                        widget=forms.PasswordInput({
+                                   'class': 'form-control',
+                                   'placeholder':'Confirm'}))
 
     def clean_password2(self):
         if 'password1' in self.cleaned_data:
