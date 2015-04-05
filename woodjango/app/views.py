@@ -6,6 +6,7 @@ from django.shortcuts import render
 from django.http import HttpRequest
 from django.template import RequestContext
 from datetime import datetime
+from app.models import Person
 
 def home(request):
     """Renders the home page."""
@@ -43,6 +44,20 @@ def about(request):
         context_instance = RequestContext(request,
         {
             'title':'About',
+            'message':'Your application description page.',
+            'year':datetime.now().year,
+        })
+    )
+
+def test(request):
+    """Renders the about page."""
+    assert isinstance(request, HttpRequest)
+    return render(
+        request,
+        'app/test.html',
+        context_instance = RequestContext(request,
+        {
+            'title':'test',
             'message':'Your application description page.',
             'year':datetime.now().year,
         })
