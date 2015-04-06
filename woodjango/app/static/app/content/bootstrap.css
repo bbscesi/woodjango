@@ -862,7 +862,15 @@ pre code {
   padding-right: 15px;
   padding-left: 15px;
 }
-
+.col-md-4{
+  transition:all ease-in-out 0.5s 0.0s;
+  background-color:#f5f5f5;
+  border:solid 10px #ffffff;
+  border-radius:20px;
+}
+.col-md-4:hover{
+  background-color:#e0e0e0;
+}
 .col-xs-1,
 .col-xs-2,
 .col-xs-3,
@@ -4505,7 +4513,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
 .navbar-inverse {
   background-color: #f5f5f5;
   /*border-color: #080808;*/
-  border-color:#ffffff;
+  border-color:#f5f5f5;
 }
 
 .navbar-inverse .navbar-brand {
@@ -4935,6 +4943,7 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
+  transition:all ease-in-out 0.5s 0.0s;
   margin-top:20px;
   padding: 30px;
   margin-bottom: 30px;
@@ -4942,9 +4951,11 @@ a.list-group-item.active > .badge,
   font-weight: 200;
   line-height: 2.1428571435;
   color: inherit;
-  background-color: #eeeeee;
+  background-color: #f5f5f5;
 }
-
+.jumbotron:hover {
+  background-color:#e0e0e0;
+}
 .jumbotron h1 {
   line-height: 1;
   color: inherit;
