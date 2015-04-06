@@ -2,8 +2,8 @@
 <form id="logoutForm" action="/logout" method="post" class="navbar-right">
     {% csrf_token %}
     <ul class="nav navbar-nav navbar-right">
-        <li><span class="navbar-brand">Hello {{ user.username }}!</span></li>
-        <li><a href="javascript:document.getElementById('logoutForm').submit()">Log off</a></li>
+        <li><span class="navbar-brand glyphicon glyphicon-edit"> {{ user.username }}!</span></li>
+        <li><a href="javascript:document.getElementById('logoutForm').submit()" class="glyphicon glyphicon-log-out"> Logoff</a></li>
     </ul>
 
 </form>
@@ -11,8 +11,8 @@
 {% else %}
 
 <ul class="nav navbar-nav navbar-right">
-    <li><a href="{% url 'login' %}">Log in</a></li>
-    <li><a href="{% url 'register' %}">Register here</a></li>
+    <li><a href="{% url 'login' %}" class="glyphicon glyphicon-log-in"> Login</a></li>
+    <li><a href="{% url 'register' %}" class="glyphicon glyphicon-edit"> Register</a></li>
 </ul>
 
 {% endif %}

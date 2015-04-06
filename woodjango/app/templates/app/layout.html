@@ -23,10 +23,10 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="{% url 'home' %}">Home</a></li>
-                    <li><a href="{% url 'about' %}">About</a></li>
-                    <li><a href="{% url 'contact' %}">Contact</a></li>
-                    <li><a href="{% url 'test' %}">test</a></li>
+                    <li><a href="{% url 'home' %}" class="glyphicon glyphicon-home"> Présentation</a></li>
+                    <li><a href="{% url 'about' %}" class="glyphicon glyphicon-th"> Catalogue</a></li>
+                    <li><a href="{% url 'contact' %}" class="glyphicon glyphicon-folder-open"> Pré-devis</a></li>
+                    {#<li><a href="{% url 'test' %}">test</a></li>#}
                 </ul>
                 {% include 'app/loginpartial.html' %}
             </div>
