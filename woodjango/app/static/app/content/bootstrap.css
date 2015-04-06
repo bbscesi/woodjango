@@ -409,6 +409,7 @@ p {
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
+  text-align:justify;
 }
 
 @media (min-width: 768px) {
@@ -4934,6 +4935,7 @@ a.list-group-item.active > .badge,
 }
 
 .jumbotron {
+  margin-top:20px;
   padding: 30px;
   margin-bottom: 30px;
   font-size: 21px;
